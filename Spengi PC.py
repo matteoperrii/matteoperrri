@@ -15,7 +15,7 @@ defaults = Defaults(parse_mode=ParseMode.HTML, run_async=True)
 
 logger = logging.getLogger(__name__)
 
-special = []
+special = [ID USER HAS PERMISSION]
 
 def start(update: Update, context: CallbackContext) -> None:
     update.message.reply_text(f'Ciao {update.effective_user.name}\nFai <b>/spengi</b> per ottenere una sorpresa', parse_mode=ParseMode.HTML)
@@ -45,7 +45,7 @@ def buttone(update, context):
         exit()
 
 def main():
-  updater = Updater('1775328711:AAGcIhH7AkJ5irpJUcs20-r8BU8ooATb4lo')
+  updater = Updater('TOKEN BOTFATHER')
   dispatcher = updater.dispatcher
   ''' BOTTONE'''
   dispatcher.add_handler(CallbackQueryHandler(buttone))
